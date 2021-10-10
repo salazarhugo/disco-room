@@ -1,0 +1,12 @@
+<div class="chat-container" fxLayout="row">
+  <mat-divider style="height:100%" [vertical]="true"></mat-divider>
+  <div class="chat" fxLayout="column" fxLayoutAlign="space-between">
+    <h3>Messages</h3>
+    <div *ngFor="let message of messages | async">
+    </div>
+    <mat-form-field class="" appearance="fill">
+      <mat-label>Enter message</mat-label>
+      <input matInput placeholder="" value="">
+    </mat-form-field>
+  </div>
+</div>

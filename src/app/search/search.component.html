@@ -1,0 +1,37 @@
+<div fxLayout="row">
+  <mat-nav-list>
+    <a mat-list-item>
+      <mat-icon class="material-icons-outlined">arrow_back</mat-icon>
+      <span class="sidenav-item-label" routerLink="../">Back to Room</span>
+    </a>
+    <mat-divider></mat-divider>
+  </mat-nav-list>
+</div>
+
+<div style="padding: 50px" fxLayout="column">
+
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Youtube Link</mat-label>
+    <input matInput placeholder="" value="" [(ngModel)]="link">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Search</mat-label>
+    <input matInput placeholder="" value="" [(ngModel)]="query">
+  </mat-form-field>
+
+  <button mat-stroked-button (click)="search()">Search</button>
+
+  <mat-card *ngFor="let video of videos | async">
+
+    <div fxLayout="row" fxLayoutAlign="space-between">
+      <div fxLayout="column">
+        <h3>{{video.snippet.title}}</h3>
+        <img [src]="video.snippet.thumbnails.default.url" [height]="90" [width]="120">
+      </div>
+      <button mat-icon-button>
+        <mat-icon>add</mat-icon>
+      </button>
+    </div>
+  </mat-card>
+</div>

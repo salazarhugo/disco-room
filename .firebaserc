@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "disco-room-59847"
+  },
+  "targets": {
+    "disco-room-59847": {
+      "hosting": {
+        "disco-room": [
+          "disco-room-59847"
+        ]
+      }
+    }
+  }
+}

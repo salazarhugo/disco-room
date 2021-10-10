@@ -1,0 +1,15 @@
+<div class="room-container" fxLayout="row" fxLayoutAlign="space-between">
+
+  <button mat-flat-button routerLink="/">Go back</button>
+  <div fxLayout="column" fxLayoutAlign="space-between">
+    <button mat-stroked-button color="primary" routerLink="/search">Add Media</button>
+
+    <div class="room-container" fxLayout="row" fxLayoutAlign="space-between">
+      <iframe id="ytplayer" type="text/html" width="640" height="360"
+              src="https://www.youtube.com/embed/M7lc1UVf-VE?autoplay=1&origin=http://example.com"
+              frameborder="0"></iframe>
+    </div>
+
+  </div>
+  <app-chat></app-chat>
+</div>

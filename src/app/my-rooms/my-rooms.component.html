@@ -1,0 +1,16 @@
+<div>
+  <button mat-raised-button color="primary" (click)="openCreateRoomDialog()">Create Room</button>
+  <div fxLayout="column" style="padding: 5px" *ngFor="let room of rooms | async">
+    <mat-card>
+      <h3>{{room.id}}</h3>
+      <h3>{{room.name}}</h3>
+      <h3>{{room.visibility}}</h3>
+      <button (click)="navigateToRoom(room)" mat-icon-button aria-label="Navigate button">
+        <mat-icon>open_in_full</mat-icon>
+      </button>
+      <button (click)="deleteRoom(room)" mat-icon-button aria-label="Delete button">
+        <mat-icon>delete</mat-icon>
+      </button>
+    </mat-card>
+  </div>
+</div>
